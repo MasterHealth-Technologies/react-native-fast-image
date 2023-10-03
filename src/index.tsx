@@ -258,7 +258,8 @@ FastImage.cacheControl = cacheControl
 
 FastImage.priority = priority
 
-FastImage.preload = (sources: Source[]) => preloaderManager.preload(sources)
+FastImage.preload = (sources, onProgress, onComplete) =>
+    preloaderManager.preload(sources, onProgress, onComplete)
 
 FastImage.clearMemoryCache = () =>
     NativeModules.FastImageView.clearMemoryCache()
