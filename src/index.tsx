@@ -16,6 +16,7 @@ import {
     ColorValue,
     NativeModules,
 } from 'react-native'
+import preloaderManager from './PreloaderManager'
 
 export type ResizeMode = 'contain' | 'cover' | 'stretch' | 'center'
 
@@ -257,8 +258,7 @@ FastImage.cacheControl = cacheControl
 
 FastImage.priority = priority
 
-FastImage.preload = (sources: Source[]) =>
-    NativeModules.FastImageView.preload(sources)
+FastImage.preload = (sources: Source[]) => preloaderManager.preload(sources)
 
 FastImage.clearMemoryCache = () =>
     NativeModules.FastImageView.clearMemoryCache()
