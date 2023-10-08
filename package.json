@@ -1,6 +1,6 @@
 {
     "name": "@masterhealth-technologies/react-native-fast-image",
-    "version": "8.7.5",
+    "version": "8.7.6",
     "publishConfig": {
         "registry": "https://npm.pkg.github.com"
     },
